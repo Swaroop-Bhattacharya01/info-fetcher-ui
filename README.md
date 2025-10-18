@@ -1,113 +1,101 @@
-Info-Fetcher UI
+# Info-Fetcher UI
 
-A sleek, user-friendly interface for fetching and displaying data — designed for speed, clarity & flexibility.
+A sleek, user-friendly interface for fetching and displaying data — designed for speed, clarity, and flexibility.
 
+**🌐 Live Demo:** [https://info-fetcher-ui-1.onrender.com](https://info-fetcher-ui-1.onrender.com)
 
-🚀 Features
+---
 
-Clean UI/UX — intuitive design that keeps things simple and distraction-free.
+## 🚀 Features
 
-Dynamic Data Fetching — pulls data from APIs (or other sources) in real time.
+* **Clean UI/UX** — Intuitive design that keeps things simple and distraction-free.
+* **Dynamic Data Fetching** — Built with React Query to pull data in real time.
+* **Modular & Extensible** — Built with separate components (Shadcn UI) so you can readily extend or swap functionality.
+* **Filter, Search & Sort** — Get to the info you need, fast.
+* **Theme-ready & Responsive** — Works beautifully on mobile, tablet, and desktop.
 
-Modular & Extensible — built with separate components so you can readily extend or swap functionality.
+## 🧩 Tech Stack
 
-Filter, Search & Sort — get to the info you need, fast.
+| Category | Technology | Notes |
+| :--- | :--- | :--- |
+| **Frontend** | React, TypeScript | Modern component-based architecture. |
+| **Styling** | Tailwind CSS, Shadcn UI | Utility-first styling for rapid development. |
+| **Build & Tooling** | Vite | Lightning-fast development and optimized production builds. |
+| **State/Data** | TanStack Query (React Query), Supabase JS | Efficient server-state management and database integration. |
+| **Testing** | *(Not specified)* | Placeholder for Jest / Vitest / RTL. |
+| **Deployment** | Render (Static Site) | Continuous deployment from the `main` branch. |
 
-Theme-ready & Responsive — works beautifully on mobile, tablet and desktop.
+## 🛠️ Installation & Setup
 
-🧩 Tech Stack
+Before starting, ensure you have Node.js and a package manager (npm or yarn) installed.
 
-Frontend: React / Vue / (adjust to your actual framework)
-
-Styling: Tailwind CSS / Chakra UI / (or whatever you’re using)
-
-Data Management: Redux / Context API / Pinia (depending on your choice)
-
-Build & Tooling: Vite / Webpack / Create React App
-
-Testing: Jest / React-Testing-Library / (or your test framework)
-
-Deployment: Netlify / Vercel / GitHub Pages etc.
-
-📸 Screenshots
-Home / Dashboard View
-
-Data Fetch & Display
-
-Responsive on Mobile
-
-🛠️ Installation & Setup
-
-Clone the repo:
-
-git clone https://github.com/Swaroop-Bhattacharya01/info-fetcher-ui.git
+### 1. Clone the Repository
+git clone [https://github.com/Swaroop-Bhattacharya01/info-fetcher-ui.git](https://github.com/Swaroop-Bhattacharya01/info-fetcher-ui.git)
 cd info-fetcher-ui
 
-
-Install dependencies:
-
+2. Install Dependencies
 npm install
+3. Setup Environment Variables
+Create a file named .env.local in the root directory and add your Supabase credentials (or other API keys if necessary):
 
+VITE_SUPABASE_URL="<YOUR_SUPABASE_URL>"
+VITE_SUPABASE_ANON_KEY="<YOUR_SUPABASE_ANON_KEY>"
+# Add any other required environment variables here
+4. Run Locally
 Start the development server:
-
 npm run dev
 
-Build for production:
+The application will typically be available at http://localhost:5173.
+
+5. Build for Production
+Build the static files (output goes to the dist folder):
+
+Bash
 
 npm run build
-
+# or
+# yarn build
 🎨 Usage & Customization
+API/Data Configuration: API endpoints and data fetching logic are typically found in the custom hooks or data utility files (e.g., src/lib/supabase.ts or src/api/).
 
-In src/config/ you’ll find configuration for API endpoints and other settings.
+Theme Customization: To change colors, fonts, or break points, update the tailwind.config.js file.
 
-To change theme colors, update tailwind.config.js (or your theme file).
+Component Structure: All UI components live in src/components/. Feel free to add new ones or modify existing ones based on the Shadcn UI framework.
 
-Components live in src/components/. Feel free to add new ones or modify existing ones.
-
-For state management, refer to src/store/ (if using Redux/Pinia).
-
-Add new data views by creating a folder in src/views/, wiring in the route and component logic.
+New Views: Add new data views by creating a folder in src/pages/ or similar, wiring in the route, and component logic using React Router DOM.
 
 ✅ Why This Project Rocks
-
-User-centred design: Focused on readability, minimalism and clarity.
+User-centred design: Focused on readability, minimalism, and clarity.
 
 Flexible architecture: Easily adapt or plug-in new data sources or UI views.
 
-Quick to deploy: Minimal configuration needed to get live.
+Quick to deploy: Minimal configuration needed to get live on platforms like Render.
 
 Maintainable code-base: Modular structure helps you iterate fast and keep code clean.
 
-Ready for growth: Whether you’re building a small dashboard or scaling up to a full-blown frontend, it has you covered.
-
-📚 Documentation
-
-For detailed docs (API specs, component guides, styling conventions), see the /docs folder or check out the Wiki
- (if you create one).
+Ready for growth: Whether you're building a small dashboard or scaling up to a full-blown frontend, it has you covered.
 
 🤝 Contributing
-
 Contributions are welcome and encouraged!
 
 Fork the project.
 
 Create a feature branch (git checkout -b feature/YourFeature).
 
-Commit your changes (git commit -m 'Add new stuff').
+Commit your changes (git commit -m 'feat: Add new stuff').
 
 Push to branch (git push origin feature/YourFeature).
 
-Open a pull request detailing what you’ve done and why.
+Open a Pull Request detailing what you've done and why.
 
-Ensure tests pass & code is lint-formatted before merging.
-
+Ensure tests pass (if implemented) and code is lint-formatted before merging.
 
 💡 Acknowledgements
-
 Thanks to all contributors and users who help make this better.
 
-Inspired by modern dashboard-design patterns and open-source UI kits.
+Inspired by modern dashboard-design patterns and the utility of Shadcn UI.
 
 📞 Contact
+If you'd like to ask questions or request features, feel free to open an issue or drop me a line at:
 
-If you’d like to ask questions or request features, feel free to open an issue or drop me a line at: Swaroop Bhattacharya – @Swaroop-Bhattacharya01 on GitHub
+Swaroop Bhattacharya – @Swaroop-Bhattacharya01 on GitHub
