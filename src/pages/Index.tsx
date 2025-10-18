@@ -110,15 +110,16 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="relative h-[50vh] overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-        
+
         <div className="relative h-full flex flex-col items-center justify-center px-4">
           <div className="flex items-center gap-3 mb-6">
-            <Film className="h-12 w-12 text-primary" />
+            {/* Site logo served from public/logo.png (place your provided image at public/logo.png) */}
+            <img src="/logo.png" alt="CineSearch logo" className="logo" />
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               CineSearch
             </h1>
@@ -126,7 +127,7 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 text-center max-w-2xl">
             Discover your next favorite movie from millions of titles
           </p>
-          
+
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
