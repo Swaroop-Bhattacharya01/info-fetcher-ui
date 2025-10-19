@@ -5,6 +5,8 @@ import { MovieGrid } from "@/components/MovieGrid";
 import { RecentSearches } from "@/components/RecentSearches";
 import { useToast } from "@/hooks/use-toast";
 import { Film, Loader2 } from "lucide-react";
+import Loader from "@/components/Loader";
+import ThemeToggle from "@/components/ThemeToggle";
 import heroImage from "@/assets/hero-cinema.jpg";
 
 interface Movie {
@@ -118,11 +120,14 @@ const Index = () => {
 
         <div className="relative h-full flex flex-col items-center justify-center px-4">
           <div className="flex items-center gap-3 mb-6">
-            {/* Site logo served from public/logo.png (place your provided image at public/logo.png) */}
-            <img src="/logo.png" alt="CineSearch logo" className="logo" />
+            {/* Site logo served from public/logo-new.png (place your provided image at public/logo-new.png) */}
+            <img src="/logo-new.png" alt="CineSearch logo" className="logo w-28 h-auto sm:w-36 md:w-48 lg:w-56 xl:w-72" />
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               CineSearch
             </h1>
+            <div className="ml-4">
+              <ThemeToggle />
+            </div>
           </div>
           <p className="text-xl text-muted-foreground mb-8 text-center max-w-2xl">
             Discover your next favorite movie from millions of titles
@@ -134,6 +139,11 @@ const Index = () => {
             onSearch={handleSearch}
             isLoading={isLoading}
           />
+          {isLoading && (
+            <div className="mt-6">
+              <Loader />
+            </div>
+          )}
         </div>
       </div>
 

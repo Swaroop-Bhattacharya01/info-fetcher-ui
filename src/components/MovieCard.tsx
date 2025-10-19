@@ -10,15 +10,15 @@ interface MovieCardProps {
 }
 
 export const MovieCard = ({ title, posterPath, releaseDate, voteAverage, overview }: MovieCardProps) => {
-  const imageUrl = posterPath 
-    ? `https://image.tmdb.org/t/p/w500${posterPath}` 
+  const imageUrl = posterPath
+    ? `https://image.tmdb.org/t/p/w500${posterPath}`
     : "https://via.placeholder.com/500x750?text=No+Image";
 
   return (
     <Card className="group overflow-hidden bg-card border-border hover:shadow-[0_0_30px_rgba(156,89,253,0.3)] transition-all duration-300">
       <div className="relative aspect-[2/3] overflow-hidden">
-        <img 
-          src={imageUrl} 
+        <img
+          src={imageUrl}
           alt={title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
         />

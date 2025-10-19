@@ -1,0 +1,85 @@
+.ldrs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+}
+
+.ldrs-svg {
+    width: 140px;
+    height: 140px;
+    transform-origin: center;
+    animation: ldrs-rotate 2.6s linear infinite;
+    filter: drop-shadow(0 8px 24px rgba(124, 58, 237, 0.22));
+}
+
+.ldrs-path {
+    stroke-dasharray: 190;
+    stroke-dashoffset: 190;
+    stroke-linecap: round;
+    animation: ldrs-dash 1.8s cubic-bezier(.65, .05, .36, 1) infinite;
+}
+
+.ldrs-p2 {
+    animation-delay: 0.25s;
+    opacity: 0.95;
+}
+
+/* Slight pulse to the whole SVG to make it feel lively */
+.ldrs-svg.pulse {
+    animation: ldrs-rotate 2.6s linear infinite, ldrs-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes ldrs-rotate {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes ldrs-dash {
+    0% {
+        stroke-dashoffset: 190;
+        stroke-opacity: 0.9
+    }
+
+    40% {
+        stroke-dashoffset: 40;
+        stroke-opacity: 1
+    }
+
+    80% {
+        stroke-dashoffset: -140;
+        stroke-opacity: 0.8
+    }
+
+    100% {
+        stroke-dashoffset: -190;
+        stroke-opacity: 0.6
+    }
+}
+
+@keyframes ldrs-pulse {
+
+    0%,
+    100% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.03)
+    }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+    .ldrs-svg,
+    .ldrs-path {
+        animation: none !important;
+        transform: none !important;
+    }
+}
