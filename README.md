@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# Info-Fetcher UI
 
-## Project info
+A sleek, user-friendly interface for fetching and displaying data — designed for speed, clarity, and flexibility.
 
-**URL**: https://lovable.dev/projects/86dfb628-e12a-43bb-8ab1-e01461925492
+**🌐 Live Demo:** [https://info-fetcher-ui-1.onrender.com](https://info-fetcher-ui-1.onrender.com)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+* **Clean UI/UX** — Intuitive design that keeps things simple and distraction-free.
+* **Dynamic Data Fetching** — Built with React Query to pull data in real time.
+* **Modular & Extensible** — Built with separate components (Shadcn UI) so you can readily extend or swap functionality.
+* **Filter, Search & Sort** — Get to the info you need, fast.
+* **Theme-ready & Responsive** — Works beautifully on mobile, tablet, and desktop.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/86dfb628-e12a-43bb-8ab1-e01461925492) and start prompting.
+## 🧩 Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+| Category | Technology | Notes |
+| :--- | :--- | :--- |
+| **Frontend** | React, TypeScript | Modern component-based architecture. |
+| **Styling** | Tailwind CSS, Shadcn UI | Utility-first styling for rapid development. |
+| **Build & Tooling** | Vite | Lightning-fast development and optimized production builds. |
+| **State/Data** | TanStack Query (React Query), Supabase JS | Efficient server-state management and database integration. |
+| **Testing** | *(Not specified)* | Placeholder for Jest / Vitest / RTL. |
+| **Deployment** | Render (Static Site) | Continuous deployment from the `main` branch. |
 
-**Use your preferred IDE**
+## 🛠️ Installation & Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Before starting, ensure you have Node.js and a package manager (npm or yarn) installed.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1. Clone the Repository
+git clone [https://github.com/Swaroop-Bhattacharya01/info-fetcher-ui.git](https://github.com/Swaroop-Bhattacharya01/info-fetcher-ui.git)
+cd info-fetcher-ui
 
-Follow these steps:
+2. Install Dependencies
+npm install
+3. Setup Environment Variables
+Create a file named .env.local in the root directory and add your Supabase credentials (or other API keys if necessary):
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+VITE_SUPABASE_URL="<YOUR_SUPABASE_URL>"
+VITE_SUPABASE_ANON_KEY="<YOUR_SUPABASE_ANON_KEY>"
+# Add any other required environment variables here
+4. Run Locally
+Start the development server:
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+The application will typically be available at http://localhost:5173.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+5. Build for Production
+Build the static files (output goes to the dist folder):
 
-**Use GitHub Codespaces**
+Bash
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+npm run build
+# or
+# yarn build
+🎨 Usage & Customization
+API/Data Configuration: API endpoints and data fetching logic are typically found in the custom hooks or data utility files (e.g., src/lib/supabase.ts or src/api/).
 
-## What technologies are used for this project?
+Theme Customization: To change colors, fonts, or break points, update the tailwind.config.js file.
 
-This project is built with:
+Component Structure: All UI components live in src/components/. Feel free to add new ones or modify existing ones based on the Shadcn UI framework.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+New Views: Add new data views by creating a folder in src/pages/ or similar, wiring in the route, and component logic using React Router DOM.
 
-## How can I deploy this project?
+✅ Why This Project Rocks
+User-centred design: Focused on readability, minimalism, and clarity.
 
-Simply open [Lovable](https://lovable.dev/projects/86dfb628-e12a-43bb-8ab1-e01461925492) and click on Share -> Publish.
+Flexible architecture: Easily adapt or plug-in new data sources or UI views.
 
-## Can I connect a custom domain to my Lovable project?
+Quick to deploy: Minimal configuration needed to get live on platforms like Render.
 
-Yes, you can!
+Maintainable code-base: Modular structure helps you iterate fast and keep code clean.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Ready for growth: Whether you're building a small dashboard or scaling up to a full-blown frontend, it has you covered.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🤝 Contributing
+Contributions are welcome and encouraged!
+
+Fork the project.
+
+Create a feature branch (git checkout -b feature/YourFeature).
+
+Commit your changes (git commit -m 'feat: Add new stuff').
+
+Push to branch (git push origin feature/YourFeature).
+
+Open a Pull Request detailing what you've done and why.
+
+Ensure tests pass (if implemented) and code is lint-formatted before merging.
+
+💡 Acknowledgements
+Thanks to all contributors and users who help make this better.
+
+Inspired by modern dashboard-design patterns and the utility of Shadcn UI.
+
+📞 Contact
+If you'd like to ask questions or request features, feel free to open an issue or drop me a line at:
+
+Swaroop Bhattacharya – @Swaroop-Bhattacharya01 on GitHub
