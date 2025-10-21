@@ -2,11 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
 
 const ThemeToggle: React.FC = () => {
-    const [dark, setDark] = useState<boolean>(() => {
+    const [dark, setDark] = useState<boolean>(false);
+
+    useEffect(() => {
         const saved = localStorage.getItem('theme');
-        if (saved) return saved === 'dark';
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    });
+        if (saved) {
+            setDark(saved === 'dark');
+        } else if (window.matchMedia) {
+            setDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
+        }
+    }, []);
 
     useEffect(() => {
         if (dark) {
