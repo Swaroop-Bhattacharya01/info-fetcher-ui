@@ -4,6 +4,7 @@ A sleek, user-friendly interface for fetching and displaying data — designed f
 
 **🌐 Live Demo:** [https://info-fetcher-ui-1.onrender.com](https://info-fetcher-ui-1.onrender.com)
 
+This is the site from where i have taken the API  key -https://www.themoviedb.org/settings/api
 ---
 
 ## 🚀 Features
